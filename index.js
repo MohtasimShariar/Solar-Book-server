@@ -12,8 +12,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-
-
 client.connect(err => {
   const collection = client.db("Solardb").collection("Books");
 
@@ -36,7 +34,7 @@ client.connect(err => {
   
 });
 app.get('/', (req, res) => {
-    res.send('working')
+    res.send('Server site  working')
 })
 
 app.listen(process.env.PORT || 5000)
